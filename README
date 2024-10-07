@@ -1,0 +1,46 @@
+# FastAPI Coding Assignment
+
+
+# TO RUN THE PROJECT
+uvicorn main:app --reload
+
+## Objective
+
+Your task is to build a simple FastAPI application that allows fetching and inserting Star Wars characters using GET and POST requests. You will work with an in-memory array (acting as a fake database) to store the character data.
+
+## Instructions
+
+1. **Set up a FastAPI application** that provides two main features:
+   - **GET** requests to retrieve all Star Wars characters or a specific character by its ID.
+   - **POST** requests to add new Star Wars characters to the list.
+
+2. You will be provided with a pre-defined list of Star Wars characters that simulates the database. Use this list to implement the GET and POST endpoints.
+
+3. Ensure that the application can:
+   - Retrieve all characters via a GET request.
+   - Retrieve a specific character by their `id`.
+   - Insert a new character via a POST request. The new character should be appended to the list.
+   - Ensure proper validation (e.g., unique IDs for new characters and error handling when a character with the given `id` does not exist).
+
+## Requirements
+
+- You must use **FastAPI** to implement the API.
+- Use the provided array of Star Wars characters as the database.
+- Implement at least the following endpoints:
+  - `GET /characters` — Retrieve all characters.
+  - `GET /characters/{character_id}` — Retrieve a character by their `id`.
+  - `POST /characters` — Add a new character to the list.
+  
+- Make sure that the API returns appropriate HTTP status codes for errors such as "Character not found" or "Character with the same ID already exists."
+
+## Provided Data
+
+Use this array as your in-memory database:
+
+```python
+star_wars_db = [
+    {"id": 1, "name": "Luke Skywalker", "role": "Jedi"},
+    {"id": 2, "name": "Darth Vader", "role": "Sith Lord"},
+    {"id": 3, "name": "Leia Organa", "role": "Princess"},
+    {"id": 4, "name": "Han Solo", "role": "Smuggler"},
+]
